@@ -4,7 +4,7 @@ from logging.handlers import RotatingFileHandler
 from settings import settings
 
 def setup_logging():
-    os.makedirs("/app/logs", exist_ok=True)
+    os.makedirs("logs", exist_ok=True)
     logger = logging.getLogger()
     logger.setLevel(settings.LOG_LEVEL)
 
