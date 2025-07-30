@@ -1,5 +1,9 @@
 from fastapi import HTTPException
 from fastapi import status
+import logging
+
+logger = logging.getLogger(__name__)
+
 
 class InvalidTimeRangeError(HTTPException):
     def __init__(self):
