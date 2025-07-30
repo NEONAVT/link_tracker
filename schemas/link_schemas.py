@@ -1,18 +1,24 @@
-# schemas/link_schemas.py
 from pydantic import BaseModel
 from typing import List
 
 
 class LinksRequest(BaseModel):
     """
-    Схема для POST /visited_links
+    Запрос для POST /visited_links.
+
+    Attributes:
+        links (List[str]): Список посещённых ссылок.
     """
     links: List[str]
 
 
 class DomainsResponse(BaseModel):
     """
-    Схема для ответа GET /visited_domains
+    Ответ для GET /visited_domains.
+
+    Attributes:
+        domains (List[str]): Список доменов.
+        status (str): Статус выполнения, по умолчанию "ok".
     """
     domains: List[str]
     status: str = "ok"
@@ -20,6 +26,9 @@ class DomainsResponse(BaseModel):
 
 class StatusResponse(BaseModel):
     """
-    Универсальный ответ об успехе
+    Универсальный ответ с информацией о статусе.
+
+    Attributes:
+        status (str): Статус выполнения, по умолчанию "ok".
     """
     status: str = "ok"
