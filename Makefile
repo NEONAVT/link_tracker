@@ -20,10 +20,20 @@ help: ## Show this help message
 	@echo "Commands:"
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  %-20s %s\n", $$1, $$2}'
 
-docs-generate: ## Generate HTML documentation for the entire project
+docs-generate:
 	@echo "Generating documentation..."
 	rm -rf docs_html
-	pdoc bot_config database filters handlers keyboards models projects_images repository services setup templates --output-dir docs_html
+	python -m pdoc \
+		main \
+		dependency \
+		exceptions \
+		database \
+		log_config \
+		repository \
+		routers \
+		schemas \
+		services \
+		-o docs_html
 
 docs-open: ## Open generated HTML documentation in browser
 ifeq ($(OS),Windows_NT)
