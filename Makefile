@@ -31,3 +31,6 @@ ifeq ($(OS),Windows_NT)
 else
 	@xdg-open docs_html/index.html || open docs_html/index.html
 endif
+
+test: ## run pytest
+	pytest -q
