@@ -72,8 +72,8 @@ link_tracker/
 1.  Клонировать репозиторий:
 
 ``` bash
-git clone https://github.com/NEONAVT/heater_service_bot
-cd heater_service_bot
+https://github.com/NEONAVT/link_tracker
+cd link_tracker
 ```
 
 2.  Установить Poetry (если не установлен):
@@ -92,10 +92,10 @@ poetry install
     заполнить переменные [**(см. раздел “Переменные окружения” ниже)**](#переменные-окружения).
 
 5.  Установить и запустить сервер Redis локально 
-https://redis-doc.netlify.app/docs/install/install-redis/
+https://redis-doc.netlify.app/docs/install/install-redis/  
 
-Для Windows: https://redis-doc.netlify.app/docs/install/install-redis/install-redis-on-windows/
-Для MacOS: https://redis-doc.netlify.app/docs/install/install-redis/install-redis-on-mac-os/
+Для Windows: https://redis-doc.netlify.app/docs/install/install-redis/install-redis-on-windows/  
+Для MacOS: https://redis-doc.netlify.app/docs/install/install-redis/install-redis-on-mac-os/  
 
 6. Запустить проект:
 ``` bash
