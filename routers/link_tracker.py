@@ -39,7 +39,7 @@ def add_visited_links(
 @router.get("/visited_domains", response_model=DomainsResponse)
 def get_visited_domains(
     from_time: int = Query(..., alias="from"),
-    to_time: int = Query(...),
+    to_time: int = Query(..., alias="to"),
     service: LinkService = Depends(get_link_service),
 ):
     """
